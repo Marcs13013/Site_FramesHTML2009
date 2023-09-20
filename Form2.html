@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Escola De Treinamento </title>
+</head>
+<body background="Fundo1.jpg" link="white" alink="blue" vlink="white" >
+<center><font size="4">
+    <div id="retorno"></div>
+<form action="FormEnviado.html" method="post" id="Forms">
+    <fieldset>
+        <legend>Formulário Para Administração </legend>
+    <label for="Fname"> Nome:</label><br>
+    <input type="text" id="Fname" name="Fname" required> <br><br>
+    <label for="Sname"> SobreNome:</label><br>
+    <input type="text" id="Sname" name="Sname" required> <br><br>
+    <label for="Nasc"> Coloque Sua Data De Nascimento:</label><br>
+    <input type="date" id="Nasc" name="Nasc" max="2005-12-31">
+    <h4>(OBS: Se você for menor de idade, não será possivel realizar o curso)</h4>
+    <label for="Curso"> Escolha o Periodo Em Que Você Irá Estudar:</label><br>
+    <select name="Periodo" id="Periodo"> 
+        <option value="Manha"> Periodo: Administração Manhã</option>
+        <option value="Tarde"> Periodo: Administração Tarde</option>
+        <option value="Noite"> Periodo: Administração Noite</option>
+    </select> <br><br>
+    <label for="Num">Digite Seu Número De Telefone:</label><br>
+  <input type="tel" id="Num" name="Num" placeholder="11987654321" pattern="[0-9]{11}" minlength="9" maxlength="11" required><br><br>
+  <label for="Mail"> Digite Seu Melhor E-mail:</label><br>
+  <input type="email" name="Mail" id="Mail" placeholder="XXX123@gmail.com" required><br><br>
+  <input type="submit" value="Enviar Formulário" > 
+    </fieldset>
+</form>
+<script>
+    // Função para lidar com o envio do formulário
+    document.getElementById("Forms").addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obtém os valores dos campos de entrada
+            const Fname = document.getElementById("Fname").value;
+            const Sname = document.getElementById("Sname").value;
+            const Nasc = document.getElementById("Nasc").value;
+            const Periodo = document.getElementById("Periodo").value;
+            const Num = document.getElementById("Num").value;
+            const Mail = document.getElementById("Mail").value;
+
+            // Redireciona o usuário para a página de resultado com o resultado na URL
+            window.location.href = `FormEnviado.html?Fname=${Fname}&Sname=${Sname}&Nasc=${Nasc}&Periodo=${Periodo}&Num=${Num}&Mail=${Mail}`;
+            
+        });
+
+
+
+
+</script>
+<br>
+<a href="Adm.html" >  <button><h4>  Voltar </h4></button></a>
+<a href="principal.html" > <h2> Página Inicial </h2></a><br><br>
+</font></center>
+
+  
+   
+</body>
+</html>

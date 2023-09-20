@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Escola De Treinamento </title>
+</head>
+
+<body background="Fundo1.jpg" link="white" alink="blue" vlink="white">
+    <center><br><br>
+        <font size="9">Obrigado Por Enviar Seu Formulário. <br>
+             Aqui Estão Suas Informações:  </Font><br>
+            <br>
+            <table border="1px" >
+                
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Fname"></p>
+                    </th>
+                </tr >
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Sname"></p>
+                    </th>
+                </tr>
+                <tr bgcolor="white">
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Nasc"></p>
+                    </th>
+                </tr>
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Periodo">
+                    </th>
+                    </p>
+                </tr>
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Num"></p>
+                    </th>
+                </tr>
+                <tr bgcolor="white">
+                    <th>
+                        <p id="Mail"></p>
+                    </th>
+                </tr >
+        <br>
+        <table>
+
+
+           
+    </center><br>
+    <center><a href="principal.html">
+            <h2> Voltar a Página Inicial </h2>
+        </a><br><br></center>
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const Fname = urlParams.get('Fname');
+        const Sname = urlParams.get('Sname');
+        const Nasc = urlParams.get('Nasc');
+        const Periodo = urlParams.get('Periodo');
+        const Num = urlParams.get('Num');
+        const Mail = urlParams.get('Mail');
+
+
+        // Exibe o resultado na página
+        document.getElementById('Fname').textContent = `Seu Nome é: ${Fname}`;
+        document.getElementById('Sname').textContent = `Seu Sobrenome é: ${Sname}`;
+        document.getElementById('Nasc').textContent = `Sua Data De Nascimento é: ${Nasc}`;
+        document.getElementById('Periodo').textContent = `Você Irá Estudar No Periodo: ${Periodo}`;
+        document.getElementById('Num').textContent = `Seu Número De Telefone é: ${Num}`;
+        document.getElementById('Mail').textContent = `Seu E-mail é: ${Mail}`;
+
+    </script>
+
+
+</body>
+
+</html>

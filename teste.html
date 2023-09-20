@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Envio de Dados de Formulário sem PHP</title>
+</head>
+<body>
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+        <br>
+
+        <button type="button" onclick="exibirDados()">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function exibirDados() {
+            // Obtenha os valores dos campos
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+
+            // Construa uma mensagem com os dados
+            var mensagem = "Nome: " + nome + "<br>E-mail: " + email;
+
+            // Exiba os dados em algum lugar da página (neste caso, em um div com id "resultado")
+            document.getElementById("resultado").innerHTML = mensagem;
+        }
+    </script>
+</body>
+</html>
